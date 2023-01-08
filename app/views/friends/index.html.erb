@@ -1,0 +1,10 @@
+<table border>
+<% @friends.each do |frnd| %>
+<tr>
+    <td><%= link_to frnd.name, friend_path(frnd) %></td>
+    <td><%= button_to "edit", edit_friend_path(frnd), method: 'get' %></td>
+    <td><%= button_to "remove", friend_path(frnd), method: 'delete' %></td>
+
+</tr>
+<% end %>
+<%= link_to "Add a new friend", new_friend_path %>

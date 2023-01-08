@@ -1,0 +1,6 @@
+<h1>Edit a Friend</h1>
+<%= form_with model: @friend do |f| %>
+<%= f.text_field :name, placeholder: "Enter your name" %><br><br>
+<%= f.text_field :age, placeholder: "Enter your age" %><br><br>
+<%= f.submit %>
+<% end %>
